@@ -13,7 +13,7 @@ if (isset($_POST['usernameInput']) && isset($_POST['passwordInput']) && isset($_
     $result = UserCreator::insertUserIntoDb($username, $password, $bio, $db);
 
     if($result['success']){
-        header('Location: index.php');
+        header('Location: userProfile.php?username=' . $username);
         unset($_SESSION['errors']);
     } else {
         $_SESSION['errors'] = $result['errors'];

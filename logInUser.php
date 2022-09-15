@@ -4,7 +4,8 @@ require_once 'vendor/autoload.php';
 use Icepace\LoginUser;
 use Icepace\UserCreator;
 
-print_r($_POST);
+$username = $_POST['usernameInput'];
 $db = new PDO('mysql:host=db; dbname=icepace', 'root', 'password');
-LoginUser::checkingUserExists($db);
+$resultArray = (LoginUser::checkingUserExists($db, $username));
+print_r($resultArray);
 

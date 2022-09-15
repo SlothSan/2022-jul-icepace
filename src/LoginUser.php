@@ -8,20 +8,12 @@ require_once "vendor/autoload.php";
 
 class LoginUser
 {
-    public static function checkingUserExists(PDO $db)
+    public static function checkingUserExists(PDO $db, string $username)
     {
-        try {
-            if (isset($_POST['login'])) {
-                if ($_POST['usernameInput'] != " " || $_POST['passwordInput'] != " ") {
-                    $query = $db->prepare('SELECT * FROM `users` WHERE `username` =?');
-                    $query->execute();
-                    $result = $query->fetch();
-                    return $result;
-                }
-            }
-        } catch (PDOException $e) {
-                header('Location:login.php');
-            }
+        $query = $db->prepare('SELECT `username`, `hashed_pass` FROM `users` WHERE `username` =?');
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        $query->execute([$username]);
+        return $query->fetch();
     }
     public static function logInUser($result)
     {

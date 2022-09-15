@@ -5,7 +5,6 @@ use Icepace\LoginUser;
 $db = new PDO('mysql:host=db; dbname=icepace', 'root', 'password');
 
 session_start();
-print_r($_POST);
 
 ?>
 

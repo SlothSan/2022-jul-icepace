@@ -29,6 +29,11 @@ body .placeholderPhoto {
   height: 150px;
   border-radius: 50%;
   align-self: center;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #000000;
+  transition: all 0.3s;
 }
 body .editPageFormContainer {
   background-color: #D1D8E2;
@@ -166,6 +171,145 @@ body .allUserCardsContainer .userCard .cardUsernameText {
   align-self: center;
   padding: 10px;
   color: #000000;
+}
+body .registrationPageContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  background: #D1D8E2;
+  position: relative;
+  top: 100px;
+  border-radius: 25px;
+}
+body .registrationPageContainer .createUserIntro {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #000000;
+}
+body .registrationPageContainer .registrationForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 300px;
+  width: 300px;
+  gap: 10px;
+  margin: 0 auto;
+}
+body .registrationPageContainer .submitFormButton {
+  background: #339DFF;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 38px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  margin: 20px auto;
+  border-width: 0;
+}
+body .registrationPageContainer .homePageTitle {
+  text-decoration: none;
+}
+body .registrationPageContainer .submitFormButton:hover {
+  background: #fff;
+  color: #339DFF;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+body .registrationPageContainer .createUserIntro {
+  text-align: center;
+}
+body .registrationPageContainer .errorMessage {
+  color: #FF0000;
+  font-size: 0.8rem;
+}
+body .userProfileContainer {
+  padding: 10px 10px 50px 10px;
+}
+body .userProfileContainer a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #000000;
+}
+body .userProfileContainer h1 {
+  color: #000000;
+}
+body .userProfileContainer .profileCard {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  align-items: center;
+}
+body .userProfileContainer .bioTextContainer {
+  border: 1px solid #D1D8E2;
+  border-radius: 15px;
+  background-color: #D1D8E2;
+  max-width: 600px;
+  overflow-wrap: break-word;
+  padding: 10px;
+  margin: 30px 10px 0 10px;
+}
+body .userProfileContainer .profileAvatarImg {
+  margin: 50px;
+  clip-path: circle(50% at 50% 50%);
+  height: 250px;
+  width: 250px;
+}
+body .registrationPageContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  background: #D1D8E2;
+  position: relative;
+  top: 100px;
+  border-radius: 25px;
+}
+body .registrationPageContainer .createUserIntro {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #000000;
+}
+body .registrationPageContainer .registrationForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 300px;
+  width: 300px;
+  gap: 10px;
+  margin: 0 auto;
+}
+body .registrationPageContainer .submitForm {
+  background: #FFFFFF;
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 38px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  margin: 20px auto;
+  border-width: 0;
+}
+body .registrationPageContainer .homePageTitle {
+  text-decoration: none;
+}
+body .registrationPageContainer .submitForm:hover {
+  background: #339DFF;
+  color: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+body .registrationPageContainer .createUserIntro {
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

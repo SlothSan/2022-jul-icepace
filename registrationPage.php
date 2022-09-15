@@ -1,6 +1,17 @@
 <?php
 require_once "vendor/autoload.php";
+session_start();
 
+$username_error = '';
+$password_error = '';
+$bio_error = '';
+
+if(isset($_SESSION['errors'])){
+    $username_error = '<p class="errorMessage">' . $_SESSION['errors']['username'] . '</p>';
+    $password_error = '<p class="errorMessage">' . $_SESSION['errors']['password'] . '</p>';
+    $bio_error = '<p class="errorMessage">' .  $_SESSION['errors']['bio'] . '</p>';
+    unset($_SESSION['errors']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +21,6 @@ require_once "vendor/autoload.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css"/>
-    <link rel="stylesheet" type="text/css" href="registrationPage.css"/>
     <title>Icepace</title>
 </head>
 <body>
@@ -37,12 +47,15 @@ require_once "vendor/autoload.php";
                 Create user
             </h1>
             <label for="usernameInput">Username</label>
-            <input type="text" name="usernameInput" class="usernameInput" id="usernameInput" placeholder="Username"/>
+            <?php echo $username_error ?>
+            <input type="text" name="usernameInput" class="usernameInput" id="usernameInput" placeholder="Username" required/>
             <label for="passwordInput">Password</label>
-            <input type="password" name="passwordInput" class="passwordInput" id="passwordInput" placeholder="Password"/>
+            <?php echo $password_error ?>
+            <input type="password" name="passwordInput" class="passwordInput" id="passwordInput" minlength="8" placeholder="Password" required/>
             <label for="bioInput">Bio</label>
-            <textarea name="bioInput" class="bioInput" id="bioInput" rows="10" placeholder="Enter your bio here..."></textarea>
-            <input class="submitForm" type="submit" value="Join Icepace!">
+            <?php echo $bio_error ?>
+            <textarea name="bioInput" class="bioInput" id="bioInput" rows="10" maxlength="2000" placeholder="Enter your bio here..." required></textarea>
+            <input class="submitFormButton" type="submit" value="Join Icepace!">
         </form>
     </div>
 </div>

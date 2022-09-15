@@ -2,6 +2,7 @@ $main-background-color: #ECEFF8;
 $navbar-color: #4F9CC8;
 $card-background-color: #9DBED4;
 $text-color-black: #000000;
+$background-bio: #D1D8E2;
 
 @mixin centering-container {
   display: flex;
@@ -39,6 +40,11 @@ body{
     height: 150px;
     border-radius: 50%;
     align-self: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #000000;
+    transition: all 0.3s;
   }
   .editPageFormContainer {
     background-color: #D1D8E2;
@@ -171,6 +177,92 @@ body{
         padding: 10px;
         color: $text-color-black;
       }
+    }
+  }
+  .registrationPageContainer {
+    @include centering-container;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background: #D1D8E2;
+    position: relative;
+    top: 100px;
+    border-radius: 25px;
+    .createUserIntro {
+
+      text-align: left;
+      font-size: 1.5rem;
+      color: #000000;
+    }
+
+    .registrationForm {
+      @include centering-container;
+      max-width: 300px;
+      width: 300px;
+      gap: 10px;
+      margin: 0 auto;
+    }
+    .submitFormButton {
+      background: #339DFF;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 38px;
+      border-radius: 50px;
+      transition: all 0.3s;
+      width: 150px;
+      height: 40px;
+      text-align: center;
+      margin: 20px auto;
+      border-width: 0;
+    }
+    .homePageTitle {
+      text-decoration: none;
+    }
+    .submitFormButton:hover {
+      background: #fff;
+      color: #339DFF;
+      box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+    }
+    .createUserIntro {
+      text-align: center;
+    }
+    .errorMessage {
+      color: #FF0000;
+      font-size: 0.8rem;
+    }
+  }
+  .userProfileContainer {
+    padding: 10px 10px 50px 10px;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: $text-color-black;
+    }
+    h1 {
+      color: $text-color-black;
+    }
+    .profileCard {
+      display: flex;
+      flex-direction: column;
+      padding-top: 5px;
+      align-items: center;
+    }
+    .bioTextContainer {
+      border: 1px solid #D1D8E2;
+      border-radius: 15px;
+      background-color: $background-bio;
+      max-width: 600px;
+      overflow-wrap: break-word;
+      padding: 10px;
+      margin: 30px 10px 0 10px;
+    }
+    .profileAvatarImg {
+      margin: 50px;
+      clip-path: circle(50% at 50% 50%);
+      height: 250px;
+      width: 250px;
     }
   }
 }
